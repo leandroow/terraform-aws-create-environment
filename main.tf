@@ -59,7 +59,7 @@ module "security_group_private" {
       from_port   = 3110
       to_port     = 3110
       protocol    = "tcp"
-      cidr_block  = "172.16.1.9/32"
+      cidr_block  = "172.16.1.0/24"
       description = "securitygroup"
     },
     {
