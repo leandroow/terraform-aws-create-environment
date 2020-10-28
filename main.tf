@@ -51,15 +51,15 @@ module "security_group_public" {
 module "security_group_private" {
   source = "./modules/security_groups/sg_private"
   vpcid  = module.vpc.vpc_id
-  sg_description = "publicSG"
-  sg_name = "SG-PUBLIC"
+  sg_description = "privateSG"
+  sg_name = "SG-PRIVATE"
 
   ingress_rules = [
     {
       from_port   = 3110
       to_port     = 3110
       protocol    = "tcp"
-      cidr_block  = "172.16.1.0/24"
+      cidr_block  = "172.16.1.9/32"
       description = "securitygroup"
     },
     {
