@@ -32,8 +32,8 @@ module "security_group_public" {
       description = "securitygroup"
     },
     {
-      from_port   = 0
-      to_port     = 65535
+      from_port   = -1
+      to_port     = -1
       protocol    = "icmp"
       cidr_block  = "0.0.0.0/0"
       description = "securitygroup"
@@ -63,8 +63,8 @@ module "security_group_private" {
       description = "securitygroup"
     },
     {
-      from_port   = 0
-      to_port     = 65535
+      from_port   = -1
+      to_port     = -1
       protocol    = "icmp"
       cidr_block  = "0.0.0.0/0"
       description = "securitygroup"

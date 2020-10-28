@@ -5,7 +5,7 @@ resource "aws_subnet" "create" {
   availability_zone        = var.availability_zone
 
   tags = {
-    Name = "var.subnet_name[count.index]"
+    Name = var.subnet_name[count.index]
   }
 }
 
