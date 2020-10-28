@@ -1,14 +1,15 @@
 variable "cidr_block" {
-    type    = string
-    default = []
+    type    = list
 }
 
 variable "availability_zone" {
     type    = string
-    default = ["us-east-2a"]
 }
 
 variable "subnet_name" {
-    type    = string
-    default = []
+    type    = list
+}
+
+variable "vpcid" {
+    type = string
 }
