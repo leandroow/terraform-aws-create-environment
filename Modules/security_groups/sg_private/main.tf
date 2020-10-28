@@ -6,7 +6,7 @@ resource "aws_security_group" "sg-private" {
 
 resource "aws_security_group_rule" "ingress_rules" {
   count       = min(length(var.ingress_rules))
-  type              = "ingress"
+  type        = "ingress"
   from_port   = var.ingress_rules[count.index].from_port
   to_port     = var.ingress_rules[count.index].to_port
   protocol    = var.ingress_rules[count.index].protocol
@@ -16,7 +16,7 @@ resource "aws_security_group_rule" "ingress_rules" {
   }
 
 resource "aws_security_group_rule" "egress_rule" {
-  type = "egress"
+  type        = "egress"
   from_port   = 0
   to_port     = 0
   protocol    = "-1"
