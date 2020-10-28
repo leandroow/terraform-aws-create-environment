@@ -82,7 +82,7 @@ module "security_group_private" {
 module "instances" {
   source            = "./modules/ec2"
   ami_id            = "ami-023c8dbf8268fb3ca"
-  instance_type     = "t3.micro"
+  instance_type     = "t2.micro"
   availability_zone = "us-east-2a"
   subnet_id_public  = module.subnets.public_subnet
   subnet_id_private = module.subnets.private_subnet
